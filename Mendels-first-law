@@ -1,0 +1,50 @@
+#First I declared the variables via input statements
+#An example data set would be 2, 2, 2 for k, m, and n, respectivly
+#For this data set, the result would be 0.78333
+
+k = float(input("What is k?"))
+m = float(input("What is m?"))
+n = float(input("What is n?"))
+x = k + m + n
+
+#The I wrote variables that determined how likely an organism would be chosen first out of the population
+
+kc = k / x
+mc = m / x
+nc = n / x
+
+#Here is the list of probabilities for the second to be chosen after one organism has already been selected from the population
+
+kcTwo = k / (x - 1)
+mcTwo = m / (x - 1)
+ncTwo = n / (x - 1)
+
+#Now for the probability for the second organism to be chosen if it comes from the same group
+
+kkcTwo = (k - 1) / (x - 1)
+mmcTwo = (m - 1) / (x - 1)
+nncTwo = (n - 1) / (x - 1)
+
+#Below I put the probability of each cross having an offspring with at least one dominant allele
+
+kxk = 1
+kxm = 1
+kxn = 1
+mxm = .75
+mxn = .5
+nxn = 0
+
+#Next I wrote a function that accounts for both the probability of an two organisms being chosen from a group and the probablity they will pass on at least one dominant allele
+#All of the cross possibilities that are not two organisms from the same group are multiplied by two due to there being two different combinations of each possible
+
+kxkp = kc * kkcTwo * kxk
+kxmp = kc * mcTwo * kxm * 2
+kxnp = kc * ncTwo * kxn * 2
+mxmp = mc * mmcTwo * mxm
+mxnp = mc * ncTwo * mxn * 2
+nxnp = nc * nncTwo * nxn #I only added this portion so that if I come across a similar problem, I can make some minor adjustments to the code and have the variable ready to be called on (currently the equation equals 0 because there are no dominant alleles in the cross)
+
+#Using the function above yeilded the overall result (probability of an offspring from two randomly choosen organisms from the population having a dominant allele)
+
+result = (kxkp + kxmp + kxnp + mxmp + mxnp)
+print(result)
