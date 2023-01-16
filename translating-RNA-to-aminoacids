@@ -1,0 +1,219 @@
+#The first step was to enter the data as an input
+
+s = str(input("Enter sequence:"))
+
+#If spaces were in the code then there would be errors in the codons when the sequence was split
+
+s = s.replace(" ", "")
+
+#Here is a function with a for loop that replaces all the codons in the sequence with their respective amino acids
+#The RNA codon table on ROSALIND was used to write the following code
+
+def translation(s):
+    for i in range(len(s)):
+        if s[i] == 'AUG':
+            s[i] = 'M'
+        
+        if s[i] == 'GCC':
+            s[i] = 'A'
+            
+        if s[i] == 'UUU':
+            s[i] = 'F'
+            
+        if s[i] == 'UUC':
+            s[i] = 'F'
+            
+        if s[i] == 'UUA':
+            s[i] = 'L'
+            
+        if s[i] == 'UUG':
+            s[i] = 'L'
+            
+        if s[i] == 'UCU':
+            s[i] = 'S'
+            
+        if s[i] == 'UCC':
+            s[i] = 'S'
+            
+        if s[i] == 'UCA':
+            s[i] = 'S'
+            
+        if s[i] == 'UCG':
+            s[i] = 'S'
+            
+        if s[i] == 'UAU':
+            s[i] = 'Y'
+            
+        if s[i] == 'UAC':
+            s[i] = 'Y'
+            
+        if s[i] == 'UGU':
+            s[i] = 'C'
+            
+        if s[i] == 'UGC':
+            s[i] = 'C'
+            
+        if s[i] == 'UGG':
+            s[i] = 'W'
+            
+        if s[i] == 'CUU':
+            s[i] = 'L'
+        
+        if s[i] == 'CUC':
+            s[i] = 'L'
+            
+        if s[i] == 'CUA':
+            s[i] = 'L'
+            
+        if s[i] == 'CUG':
+            s[i] = 'L'
+            
+        if s[i] == 'CCU':
+            s[i] = 'P'
+            
+        if s[i] == 'CCC':
+            s[i] = 'P'
+            
+        if s[i] == 'CCA':
+            s[i] = 'P'
+            
+        if s[i] == 'CCG':
+            s[i] = 'P'
+            
+        if s[i] == 'CAU':
+            s[i] = 'H'
+            
+        if s[i] == 'CAC':
+            s[i] = 'H'
+            
+        if s[i] == 'CAA':
+            s[i] = 'Q'
+            
+        if s[i] == 'CAG':
+            s[i] = 'Q'
+            
+        if s[i] == 'CGU':
+            s[i] = 'R'
+            
+        if s[i] == 'CGC':
+            s[i] = 'R'
+            
+        if s[i] == 'CGA':
+            s[i] = 'R'
+            
+        if s[i] == 'CGG':
+            s[i] = 'R'
+            
+        if s[i] == 'AUU':
+            s[i] = 'I'
+            
+        if s[i] == 'AUC':
+            s[i] = 'I'
+            
+        if s[i] == 'AUA':
+            s[i] = 'I'
+            
+        if s[i] == 'ACU':
+            s[i] = 'T'
+            
+        if s[i] == 'ACC':
+            s[i] = 'T'
+            
+        if s[i] == 'ACA':
+            s[i] = 'T'
+            
+        if s[i] == 'ACG':
+            s[i] = 'T'
+            
+        if s[i] == 'AAU':
+            s[i] = 'N'
+            
+        if s[i] == 'AAC':
+            s[i] = 'N'
+        
+        if s[i] == 'AAA':
+            s[i] = 'K'
+            
+        if s[i] == 'AAG':
+            s[i] = 'K'
+            
+        if s[i] == 'AGU':
+            s[i] = 'S'
+            
+        if s[i] == 'AGC':
+            s[i] = 'S'
+            
+        if s[i] == 'AGA':
+            s[i] = 'R'
+            
+        if s[i] == 'AGG':
+            s[i] = 'R'
+            
+        if s[i] == 'GUU':
+            s[i] = 'V'
+            
+        if s[i] == 'GUC':
+            s[i] = 'V'
+            
+        if s[i] == 'GUA':
+            s[i] = 'V'
+            
+        if s[i] == 'GUG':
+            s[i] = 'V'
+            
+        if s[i] == 'GCU':
+            s[i] = 'A'
+            
+        if s[i] == 'GCA':
+            s[i] = 'A'
+            
+        if s[i] == 'GCG':
+            s[i] = 'A'
+            
+        if s[i] == 'GAU':
+            s[i] = 'D'
+            
+        if s[i] == 'GAC':
+            s[i] = 'D'
+            
+        if s[i] == 'GAA':
+            s[i] = 'E'
+            
+        if s[i] == 'GAG':
+            s[i] = 'E'
+            
+        if s[i] == 'GGU':
+            s[i] = 'G'
+            
+        if s[i] == 'GGC':
+            s[i] = 'G'
+            
+        if s[i] == 'GGA':
+            s[i] = 'G'
+            
+        if s[i] == 'GGG':
+            s[i] = 'G'
+            
+        #For the stop codons, these if-statements were used to remove them from the sequence as to not interfere with the sequence of amino acids
+            
+        if s[i] == 'UAA':
+            s[i] = ''
+            
+        if s[i] == 'UAG':
+            s[i] = ''
+            
+        if s[i] == 'UGA':
+            s[i] = ''
+      
+      #After all of the codons have been replaced by their amino acids, the list was joined into a single string
+            
+    s = ''.join(s)
+    print(s)
+    
+#Here, the sequence is split into codons
+
+s = [(s[i:i + 3]) for i in range(0, len(s), 3)]
+
+#After sequence s was split into codons, the translation() function was called on to convert the codons into amino acids
+
+translation(s)
