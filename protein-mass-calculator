@@ -1,0 +1,81 @@
+#ps refers to the protein's amino acid sequence
+
+ps = 'CPLAAQCVCQFPQPFFQRKSSARRNFEEYWSWNVGCYFNMMLCKQAMMLQTHIEMIGKKPVYPAWFMWFHMPNPQPLASNTEDRQRTMPVWLIFLAERFYTKEESQYYYSQELVICSMIPGFMYVNLEIKNGQMCHHRLWQHKHDTDPFQTVDIFRWDLGAQEFDHLGNHKCWVHMQTAACKGEAGFAWRHMDSDRNDPSWCHCCRSRQYCVEFYIQERWALGFSQNSSSGKYVWGLLMADLGGCWRCYDCPFHWKVTCMNQNSPCTAQTFKYYGGQLKFSCLYGTDGLQCCMQKTWGLHGEELSWNWCMWEDSREFNGLIITKDAQWYNMPNNPYSEYLIACKRFQYLWYWWFNSDHGNTPKGTGAQWYWFYMPFPLIGDTDWYLSYCIAPTDSAFEWQSTKAWPEWPRRMYMQFLYTVDSFIKSTTNYCWTDYVVSKLFSCDSGKCFLRPWQLNTWCIAVDFRFHPFHHDQRTGPIWSEVRVPMIGNSDTWPLEECQNHHDCESYAIMTHDILKRWQSLYFLTTAEDNLMGTNIPYWVKKCVMDNGVGVTCYIGHGLYLSWAQHEFFLWMDHVPNKAMNSWWRIPQKPPMDWLFPFAWDWDPPEHLHMTLPDTDILCYKFAKCIKIMTVFEHCVLDDAVHCRDVRKVVIWCYGKHLELGWEVHVHPTINSWRGQHQMNNSSEVYGHIAAFMKCQNHGPRTMATKNQLFSENPIYDENKQPYHFAHENPGGTPPRAHSLKLIQFVCTDSHYDQPWTTFFFMKKTWFFPPIVWCPWMILMQMCLAHGFGKFSDDYVIFDIVWPGIFDEWKIQCWHESSRRRFGMSIHLSVKRYLSYFTMNFDQMSFKFYHIFSHGWMYAHQKTPIPHSKHAGVNMIDQCNILGDFITKEPQCYYRPVPQGKDWKNIHCAQMTSFWQRYEWVFDFIQDRNTRYFTHYYCQLDTQNKVMFIETA'
+
+#This here is simply to remove spaces after copying and pasting the data
+
+ps = ps.replace(' ', '')
+
+#This function uses a for loop to check each character in the string and adds it to the total mw in the variable pm
+#Note that the masses of each amino acid were used from the monoisotopic mass table availible on ROSALIND
+
+def proteinMassCalculation(ps):
+    pm = 0
+    for i in range(len(ps)):
+        if ps[i] == 'A':
+             pm += 71.03711
+
+        if ps[i] == 'C':
+            pm += 103.00919
+
+        if ps[i] == 'D':
+            pm += 115.02694
+
+        if ps[i] == 'E':
+            pm += 129.04259
+
+        if ps[i] == 'F':
+            pm += 147.06841
+
+        if ps[i] == 'G':
+            pm += 57.02146
+
+        if ps[i] == 'H':
+            pm += 137.05891
+
+        if ps[i] == 'I':
+            pm += 113.08406
+
+        if ps[i] == 'K':
+            pm += 128.09496
+
+        if ps[i] == 'L':
+            pm += 113.08406
+
+        if ps[i] == 'M':
+            pm += 131.04049
+
+        if ps[i] == 'N':
+            pm += 114.04293
+
+        if ps[i] == 'P':
+            pm += 97.05276
+
+        if ps[i] == 'Q':
+            pm += 128.05858
+
+        if ps[i] == 'R':
+            pm += 156.10111
+
+        if ps[i] == 'S':
+            pm += 87.03203
+
+        if ps[i] == 'T':
+            pm += 101.04768
+
+        if ps[i] == 'V':
+            pm += 99.06841
+
+        if ps[i] == 'W':
+            pm += 186.07931
+
+        if ps[i] == 'Y':
+            pm += 163.06333
+
+#The value of pm is then put to output
+
+    print(pm)
+
+proteinMassCalculation(ps)
+
+#The answer to this problem was 114146.27040000072 amu
