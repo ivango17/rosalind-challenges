@@ -1,0 +1,27 @@
+#s is the sequence that we are trying to find the motif in
+#t is the motif sequence
+
+s = ''
+t = ''
+
+#The two lines of code below are simply to ensure that there is no white space in the strings
+
+s.replace(" ", "")
+t.replace(" ", "")
+
+#Below is a for loop that looks for the base that t begins with
+
+for i in range(len(s)):
+    c = 0
+    
+    #Once the loop has found the base that t starts with, it starts this for loop
+    
+    if s[i] == t[0]:
+        for x in range(len(t)): #In this for loop, x denotes the index of x, while i is the index position of s. This allows the program to compare characters at different positions relative to their index.
+
+        
+            if t[x] == s[i + x]: 
+                c += 1 #c is simply a counter. Each time a character from s matches the respective character in t, 1 is added to the counter. When the counter reaches the number of characters that make up t, it will print the index position of the first character on s.
+
+                if c == (len(t)):
+                    print(i + 1)
