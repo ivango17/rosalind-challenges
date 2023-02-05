@@ -9,7 +9,7 @@ sOne = sOne.replace(' ', '')
 sTwo = sTwo.replace(' ','')
 count = 0
 
-#In this for loop, 1 is added to the variable count when characters in the sequences are defferent from each other
+#In this for loop, 1 is added to the variable count when characters in the sequences are different from each other
 for i in range(len(sOne)):
     if sOne[i] != sTwo[i]:
         count += 1
