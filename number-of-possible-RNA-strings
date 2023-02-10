@@ -1,0 +1,60 @@
+proteinSequence = ''
+
+numPossibleRNASeq = 1
+
+for i in range(len(proteinSequence)):
+    if proteinSequence[i] == 'A':
+        numPossibleRNASeq *= 4
+
+    if proteinSequence[i] == 'C':
+        numPossibleRNASeq *= 2
+
+    if proteinSequence[i] == 'D':
+        numPossibleRNASeq *= 2
+
+    if proteinSequence[i] == 'F':
+        numPossibleRNASeq *= 4
+
+    if proteinSequence[i] == 'G':
+        numPossibleRNASeq *= 4
+
+    if proteinSequence[i] == 'I':
+        numPossibleRNASeq *= 3
+
+    if proteinSequence[i] == 'K':
+        numPossibleRNASeq *= 2
+
+    if proteinSequence[i] == 'L':
+        numPossibleRNASeq *= 6
+
+    if proteinSequence[i] == 'N':
+        numPossibleRNASeq *= 2
+
+    if proteinSequence[i] == 'P':
+        numPossibleRNASeq *= 4
+
+    if proteinSequence[i] == 'Q':
+        numPossibleRNASeq *= 2
+
+    if proteinSequence[i] == 'R':
+        numPossibleRNASeq *= 6
+
+    if proteinSequence[i] == 'S':
+        numPossibleRNASeq *= 6
+
+    if proteinSequence[i] == 'T':
+        numPossibleRNASeq *= 4
+
+    if proteinSequence[i] == 'V':
+        numPossibleRNASeq *= 4
+
+    if proteinSequence[i] == 'Y':
+        numPossibleRNASeq *= 2
+
+
+
+
+numPossibleRNASeq *= 4
+numPossibleRNASeqMod = numPossibleRNASeq % 1000000
+
+print(numPossibleRNASeqMod)
