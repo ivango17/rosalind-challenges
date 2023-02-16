@@ -2,7 +2,7 @@ s = ''
 
 dsr = s
 
-# Lines 8 through 18 are from a simple code that I wrote when I first started working on bioinformatic problems. Since I did not make it a function, I simply copied and pasted the code to give the if statements a 3' to 5' string to compare the original sequence to
+# Lines 8 through 18 are from a simple code that I wrote when I first started working on bioinformatic problems. Since I did not make it a function, I simply copied and pasted the code to give the if statements a complementary sequence to compare the original sequence to
 # Here I used the replace function to assign the bases to their complimentary base as a lower case so that down-stream replace functions dont intrupt the code
 
 dscOne = dsr.replace('A', 't')
@@ -47,3 +47,12 @@ for i in range(len(s)):
                     if s[i + 3] == sc[i + 6]:
                         if s[i + 4] == sc[i + 5]:
                             print((i + 1), " ", "10")
+                            
+     if i < (len(s) - 11):
+       if s[i] == sc[i + 11]: #Restriction site 12bp long
+           if s[i + 1] == sc[i + 10]:
+               if s[i + 2] == sc[i + 9]:
+                   if s[i + 3] == sc[i + 8]:
+                       if s[i + 4] == sc[i + 7]:
+                           if s[i + 5] == sc[i + 6]:
+                               print((i + 1), " ", "12")
